@@ -1,0 +1,58 @@
+body {
+  background-color: peachpuff;
+}
+
+.head {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.book-image {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: 25%;
+  float: right;
+}
+
+.rating {
+  font-weight: bold;
+  font-style: italic;
+  font-size: small;
+}
+
+.searchBar {
+  width: 250px;
+}
+
+.btn {
+  font-size: 20px;
+}
+
+.feedback {
+  width: 500px;
+  height: 200px;
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  flex-direction: row;
+  justify-content: space-between;
+}

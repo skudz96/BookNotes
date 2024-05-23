@@ -138,6 +138,18 @@ app.post("/save/:id", async (req, res) => {
   }
 });
 
+app.post("/delete", async (req, res) => {
+  // this deletes something
+  let deleteRequest = req.body.book_id;
+  try {
+    await db.query("DELETE FROM books WHERE id = $1", [deleteRequest]);
+    res.redirect("/");
+  } catch (error) {
+    console.error("error executing delete query", err);
+    res.status(500).send("Server error");
+  }
+});
+
 process.on("SIGINT", () => {
   console.log("Closing DB connection");
   db.end();
